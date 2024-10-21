@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -13,22 +15,7 @@ module.exports = {
       },
     },
   },
-  //...
-  daisyui: {
-    themes: [
-      {
-        mytheme: {
-          primary: "#a991f7",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
-          neutral: "#3d4451",
-          "base-100": "#ffffff",
-        },
-      },
-      "dark",
-      "cupcake",
-    ],
-  },
+
   // daisy ui plugin
   plugins: [require("daisyui")],
 };
